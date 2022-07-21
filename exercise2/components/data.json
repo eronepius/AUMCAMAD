@@ -1,0 +1,30 @@
+{
+    "2021178009":{
+        "FirstName": "Anton",
+        "LastName": "Pius",
+        "RegNo" : "2021178009",
+        "DOB": "08-Feb-1993",
+        "CurrentSem": "Semester II",
+        "SemCGPA":{
+            "Semester 1": "7.0",
+            "Semester 2": "Not Annouced",
+            "Semester 3":"Not Annouced",
+            "Semester 4": "Not Annouced"
+        },
+        "OfferLetter": ["Verizon", "Infosys"]
+    },
+    "2021178002":{
+        "FirstName": "Abhishek",
+        "LastName": "M",
+        "RegNo" : "2021178002",
+        "DOB": "02-Apr-2001",
+        "CurrentSem": "Semester II",
+        "SemCGPA":{
+            "Semester 1": "9.5",
+            "Semester 2": "Not Annouced",
+            "Semester 3": "Not Annouced",
+            "Semester 4": "Not Annouced"
+        },
+        "OfferLetter": []
+    }
+}
