@@ -16,7 +16,7 @@ function Organizer(){
     return(
         <NavigationContainer>
             <Stack.Navigator>
-                <Stack.Screen name="Search">
+                <Stack.Screen name="Interview Registration">
                     {(props) => <Search {...props} search={setSearch} />}
                 </Stack.Screen>
                 <Stack.Screen name="InfoPage">

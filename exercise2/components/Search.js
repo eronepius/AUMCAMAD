@@ -1,5 +1,5 @@
 import React from "react";
-import { View, TextInput, Button, StyleSheet } from "react-native";
+import { Text, View, TextInput, Button, StyleSheet } from "react-native";
 import { useNavigation } from '@react-navigation/native';
 
 
@@ -16,9 +16,15 @@ function Search(props){
     return(
         <View style={SearchStyles.SearchView}>
             <View>
+            <TextInput
+                    style={SearchStyles.SearchText}
+                    placeholder="First Name"/>
+            <TextInput
+                    style={SearchStyles.SearchText}
+                    placeholder="Last Name"/>
                 <TextInput
                     style={SearchStyles.SearchText}
-                    placeholder="Reg No 2021178009"
+                    placeholder="2021178009"
                     keyboardType="numeric"
                     onEndEditing={(e) => handleOnEditingEnd(e)}
                 />
@@ -44,7 +50,8 @@ const SearchStyles = StyleSheet.create({
         borderBottomWidth: 2,
         paddingLeft: 20,
         paddingRight: 20,
-        fontSize: 20
+        fontSize: 20,
+        width: 300
     },
     SearchButton:{
         marginLeft : 5,

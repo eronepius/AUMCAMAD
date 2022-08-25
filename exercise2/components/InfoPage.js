@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from "react";
-import { Text, TextInput, View, StyleSheet, Button} from "react-native";
+import { Text, TextInput, View, StyleSheet, Button, KeyboardAvoidingView, Platform} from "react-native";
 import data from "./data.json"
 import { useNavigation } from '@react-navigation/native';
 
@@ -7,8 +7,9 @@ function InfoPage(props){
     const navigation = useNavigation();
     let search = props.search
     let mydata = data[search]
+    if(mydata){
     return(
-        <View key="InfoView" style={InfoPageStyles.InfoPageView}>
+        <KeyboardAvoidingView behavior={Platform.OS === "ios" ? "padding" : "height"} key="InfoView" style={InfoPageStyles.InfoPageView}>
             <Text key="R" style={InfoPageStyles.TextViewLabel}>Registed No : </Text>
                 <TextInput key={mydata['RegNo']} style={InfoPageStyles.TextView} value={mydata['RegNo']} />
             <Text key="FN" style={InfoPageStyles.TextViewLabel}>First Name :</Text>
@@ -24,7 +25,7 @@ function InfoPage(props){
                     return(
                     <View key={type + "view"}>
                     <Text key={type+"text"} style={InfoPageStyles.TextViewLabel}>{type}</Text>
-                        <TextInput key={type} style={InfoPageStyles.TextView} value={mydata['SemCGPA'][type]} />
+                        <TextInput key={type} style={InfoPageStyles.TextView} keyboardType="numeric" value={mydata['SemCGPA'][type]} />
                     </View>
                     )
                 })
@@ -36,8 +37,15 @@ function InfoPage(props){
                 color="#0074B7"
                 onPress={()=> navigation.navigate("Schedule Interview")}/>
             </View>
-        </View>
+        </KeyboardAvoidingView>
     )
+        }else{
+            return(
+            <View style={InfoPageStyles.InfoPageView}>
+                <Text style={InfoPageStyles.TextViewLabel}>No Data found for the Registed Number...</Text>
+            </View>
+            );
+        }
 }
 
 const InfoPageStyles = StyleSheet.create({

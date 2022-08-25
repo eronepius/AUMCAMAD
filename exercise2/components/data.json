@@ -7,9 +7,9 @@
         "CurrentSem": "Semester II",
         "SemCGPA":{
             "Semester 1": "7.0",
-            "Semester 2": "Not Annouced",
-            "Semester 3":"Not Annouced",
-            "Semester 4": "Not Annouced"
+            "Semester 2": null,
+            "Semester 3":null,
+            "Semester 4": null
         },
         "OfferLetter": ["Verizon", "Infosys"]
     },
@@ -21,9 +21,9 @@
         "CurrentSem": "Semester II",
         "SemCGPA":{
             "Semester 1": "9.5",
-            "Semester 2": "Not Annouced",
-            "Semester 3": "Not Annouced",
-            "Semester 4": "Not Annouced"
+            "Semester 2": null,
+            "Semester 3": null,
+            "Semester 4": null
         },
         "OfferLetter": []
     }

@@ -11,19 +11,27 @@ function DatePickerPage(){
 
     const handleDateChange=(e)=>{
         setDate(e);
-        setSchedule(true);
+    }
+
+    const handleDateFreeze = () =>{
+        setSchedule(true)
     }
 
 if(schedule === false){
   return (
     <View style={DPstyles.DPView}>
         <DatePicker date={date} onDateChange={e => handleDateChange(e)} />
+        <Button
+            key="Mybutton"
+            title="Freeze Interview Date"
+            color="#0074B7"
+            onPress={handleDateFreeze}/>
     </View>
   )
 }else{
     return(
     <View style={DPstyles.DPView}>
-        <Text style={DPstyles.DPText}>Interniew will be scheduled on {date.getDate()}/{date.getMonth()}/{date.getFullYear()} - {date.getHours()}: 00 : 00 hrs</Text>
+        <Text style={DPstyles.DPText}>Interview will be scheduled on {date.getDate()}/{date.getMonth() + 1}/{date.getFullYear()} - {date.getHours()}: 00 : 00 hrs</Text>
         <Button
             key="Mybutton"
             title="Schedule My Interview"
